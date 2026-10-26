@@ -293,7 +293,7 @@ function initClassRegistrationForm() {
     const message = [
       "Assalamu'alaikum Admin Majelis Taklim Roudhotul Ilmi,",
       '',
-      'Saya ingin mendaftar kelas Tahsin / Iqra.',
+      'Saya ingin mendaftar kelas Tahsin / Tilawati.',
       `Nama: ${name}`,
       `Nomor WhatsApp: ${normalizedPhone}`,
       `Pilihan hari: ${session}`,
