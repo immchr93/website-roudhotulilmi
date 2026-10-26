@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profil & Tentang Kami | Majelis Taklim Roudhotul Ilmi</title>
+  <meta name="description" content="Profil, Sejarah, Visi Misi, dan Susunan Asatidz serta Pengurus Majelis Taklim Roudhotul Ilmi (www.roudhotulilmi.id)">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b',
+            },
+            gold: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+
+  <!-- NAVIGATION BAR -->
+  <header class="sticky top-0 z-50 glass-nav border-b border-slate-200/80 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <img src="assets/images/logo.png" alt="Logo Majelis Taklim Roudhotul Ilmi" class="w-12 h-12 rounded-full object-contain shadow-md group-hover:scale-105 transition-smooth shrink-0">
+          <div>
+            <span class="text-xl font-bold tracking-tight text-brand-900 block leading-tight">ROUDHOTUL ILMI</span>
+            <span class="text-xs text-brand-600 font-medium tracking-wide">Majelis Taklim & Pusat Dakwah</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-1 lg:gap-2">
+          <a href="index.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-800 hover:bg-slate-100 transition-smooth">Beranda</a>
+          <a href="profil.html" class="px-3 py-2 rounded-lg text-sm font-semibold text-brand-800 bg-brand-50 border border-brand-200/60">Profil</a>
+          <a href="jadwal.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-800 hover:bg-slate-100 transition-smooth">Jadwal Kajian</a>
+          <a href="media.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-800 hover:bg-slate-100 transition-smooth">Media & Arsip</a>
+          <a href="infaq.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-800 hover:bg-slate-100 transition-smooth">Infaq & Wakaf</a>
+          <a href="kontak.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-800 hover:bg-slate-100 transition-smooth">Kontak</a>
+        </nav>
+
+        <div class="hidden md:flex items-center gap-3">
+          <a href="infaq.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white text-sm font-semibold px-4 py-2.5 rounded-xl shadow-md transition-smooth">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>Infaq Online</span>
+          </a>
+        </div>
+
+        <button id="mobile-menu-toggle" aria-label="Buka Menu" class="md:hidden p-2 rounded-xl text-slate-600 hover:text-brand-800 hover:bg-slate-100">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-2 shadow-xl">
+      <a href="index.html" class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50">Beranda</a>
+      <a href="profil.html" class="block px-3 py-2.5 rounded-lg text-base font-semibold text-brand-800 bg-brand-50">Profil Majelis</a>
+      <a href="jadwal.html" class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50">Jadwal & Info Kajian</a>
+      <a href="media.html" class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50">Media & Dokumentasi Dakwah</a>
+      <a href="infaq.html" class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50">Infaq, Sedekah & Wakaf</a>
+      <a href="kontak.html" class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50">Kontak & Sekretariat</a>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="islamic-pattern text-white py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block px-3 py-1 bg-emerald-800/80 rounded-full text-xs text-amber-300 font-semibold mb-3 border border-emerald-600/60">TENTANG KAMI</span>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-white">Profil Majelis Taklim Roudhotul Ilmi</h1>
+      <p class="text-emerald-100/90 text-sm sm:text-base max-w-2xl mx-auto mt-2">
+        Mengenal lebih dekat sejarah, arah perjuangan dakwah, susunan pembina, serta para asatidz yang membimbing jamaah.
+      </p>
+    </div>
+  </section>
+
+  <!-- SEJARAH SINGKAT & LATAR BELAKANG -->
+  <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-6 space-y-5">
+        <span class="text-brand-700 font-bold text-xs uppercase tracking-wider">Sejarah & Latar Belakang</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-tight">
+          Ikhtiar Bersama Memberantas Buta Huruf Al-Qur'an & Membina Umat
+        </h2>
+        <div class="text-slate-600 text-sm leading-relaxed space-y-4">
+          <p>
+            Al-Qur'an adalah petunjuk (hudan) dan pedoman hidup utama bagi setiap muslim. Membaca, memahami, serta mengamalkan isi kandungan Al-Qur'an merupakan kewajiban individu (fardhu 'ain) sekaligus pondasi utama dalam membangun keluarga dan masyarakat yang berakhlak mulia.
+          </p>
+          <p>
+            Namun, dalam realitas kehidupan bermasyarakat, masih dijumpai sebagian umat Islam yang mengalami kendala dalam membaca Al-Qur'an atau berada dalam kondisi buta huruf Al-Qur'an. Keterbatasan kemampuan ini tidak hanya menghambat kualitas ibadah mandiri, tetapi juga berpotensi memutus rantai pendidikan agama di tingkat keluarga—sehingga orang tua kesulitan mengajarkan Al-Qur'an kepada anak dan cucunya secara mandiri.
+          </p>
+          <p>
+            Berawal dari keprihatinan mendalam terhadap kondisi tersebut, lahir sebuah kesadaran bersama akan pentingnya wadah pembinaan keagamaan yang inklusif, merangkul, dan berkelanjutan. <strong>Majelis Taklim Roudhotul Ilmi</strong> didirikan dengan cita-cita mulia (visi utama) untuk memberantas buta huruf Al-Qur'an di tengah masyarakat.
+          </p>
+          <p>
+            Majelis Taklim ini hadir tidak sekadar sebagai tempat berkumpul dan menuntut ilmu, tetapi sebagai sarana pemberdayaan spiritual. Fokus awal gerakan ini difokuskan pada pengajaran baca-tulis Al-Qur'an (Tahsin/Iqra) hingga jamaah mampu membaca dengan tartil dan benar. Lebih dari itu, pembelajaran dirancang agar ilmu yang diperoleh tidak berhenti pada diri sendiri, melainkan dapat diamalkan dalam kehidupan sehari-hari serta diwariskan minimal dengan mengajarkannya kembali kepada anak, cucu, dan anggota keluarga tercinta.
+          </p>
+          <p>
+            Dengan terbentuknya generasi dan keluarga yang dekat dengan Al-Qur'an, diharapkan Majelis Taklim ini menjadi benteng moral, pencerah spiritual, dan sarana mencetak keluarga yang sakinah, mawaddah, wa rahmah di bawah naungan Al-Qur'an.
+          </p>
+        </div>
+      </div>
+
+      <div class="lg:col-span-6">
+        <div class="bg-gradient-to-tr from-brand-900 to-emerald-800 p-8 rounded-3xl text-white shadow-xl relative overflow-hidden">
+          <div class="absolute -right-10 -bottom-10 w-44 h-44 bg-amber-400/10 rounded-full blur-2xl"></div>
+          <h3 class="text-xl font-bold text-amber-300 mb-6 flex items-center gap-2">
+            <span>✨</span> Prinsip Pergerakan Kami
+          </h3>
+          <ul class="space-y-4 text-xs sm:text-sm text-emerald-100">
+            <li class="flex items-start gap-3">
+              <span class="p-1 rounded-full bg-emerald-700 text-amber-300 shrink-0 font-bold text-xs">✓</span>
+              <span><strong>Mendasarkan Dakwah pada Dalil:</strong> Setiap materi berpedoman teguh pada Kitabullah dan Sunnah Rasulullah ﷺ dengan pemahaman ulama ahlusunah waljamaah</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="p-1 rounded-full bg-emerald-700 text-amber-300 shrink-0 font-bold text-xs">✓</span>
+              <span><strong>Dakwah Hikmah & Mau'izhah Hasanah:</strong> Menyampaikan nasehat secara santun, mendidik, dan solutif terhadap problematika umat.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="p-1 rounded-full bg-emerald-700 text-amber-300 shrink-0 font-bold text-xs">✓</span>
+              <span><strong>Menebar Ukhuwah Islamiyah:</strong> Menjalin persaudaraan antar sesama muslim tanpa memandang latar belakang ormas atau suku</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISI & MISI -->
+  <section class="py-16 bg-white border-y border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-brand-700 font-bold text-xs uppercase tracking-wider">Arah & Tujuan</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Visi & Misi Majelis</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Visi Card -->
+        <div data-pop-in style="--pop-in-delay: 0ms" class="bg-gradient-to-b from-brand-50 to-white p-8 rounded-3xl border border-brand-200/70 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-2xl bg-brand-700 text-white flex items-center justify-center font-bold text-lg mb-6 shadow-md shadow-brand-700/20">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+            </div>
+            <h3 class="text-xl font-bold text-brand-900 mb-3">Visi Kami</h3>
+            <p class="text-slate-700 text-base leading-relaxed italic">
+              "Terwujudnya Majelis Taklim sebagai pusat pembinaan Al-Qur’an, ilmu, dan akhlak Islami yang unggul dalam memberantas buta huruf Al-Qur'an serta mencetak generasi yang berilmu amaliyah dan beramal ilmiah menuju masyarakat madani."
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-brand-100 text-xs text-brand-700 font-semibold">
+            Roudhotul Ilmi — Wadah Tholabul 'Ilmi Syar'i
+          </div>
+        </div>
+
+        <!-- Misi Card -->
+        <div data-pop-in style="--pop-in-delay: 120ms" class="bg-gradient-to-b from-amber-50/50 to-white p-8 rounded-3xl border border-amber-200/70 shadow-sm">
+          <div class="w-12 h-12 rounded-2xl bg-amber-500 text-slate-900 flex items-center justify-center font-bold text-lg mb-6 shadow-md shadow-amber-500/20">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-slate-900 mb-3">Misi Kami</h3>
+          <ul class="space-y-3 text-xs sm:text-sm text-slate-700">
+            <li class="flex items-start gap-2.5">
+              <span class="text-amber-600 font-bold">1.</span>
+              <span>Menyelenggarakan kajian keislaman secara rutin dan berjenjang dengan kurikulum terarah.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-amber-600 font-bold">2.</span>
+              <span>Menyediakan sarana bimbingan ibadah, tahsin Al-Qur'an, dan konsultasi syariah bagi jamaah.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-amber-600 font-bold">3.</span>
+              <span>Memanfaatkan teknologi media digital sebagai sarana syiar dakwah yang luas dan mudah diakses.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-amber-600 font-bold">4.</span>
+              <span>Membangun kepedulian sosial melalui program infaq, sedekah, dan pemberdayaan dhuafa.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUSUNAN ASATIDZ / PEMATERI TETAP -->
+  <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <span class="text-brand-700 font-bold text-xs uppercase tracking-wider">Dewan Guru</span>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Profil Asatidz Pemateri</h2>
+      <p class="text-slate-600 text-sm mt-2">Para asatidz dan ustazah yang membimbing dan mengisi kajian rutin di Majelis Roudhotul Ilmi.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <!-- Ustadzah Anjar Ruwardani -->
+      <div data-pop-in style="--pop-in-delay: 0ms" class="bg-white rounded-3xl p-6 border border-slate-200 text-center shadow-sm hover:shadow-md transition-smooth">
+        <div class="w-24 h-24 rounded-full bg-brand-100 border-4 border-brand-50 mx-auto flex items-center justify-center text-brand-800 text-2xl font-bold mb-4">
+          AR
+        </div>
+        <h4 class="text-lg font-bold text-slate-900">Ustadzah Anjar Ruwardani</h4>
+        <p class="text-xs text-brand-700 font-semibold mb-3">Pengajar Tahsin & Al-Qur'an</p>
+        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+          Membimbing jamaah dalam pembelajaran Tahsin dan Al-Qur'an di Majelis Taklim Roudhotul Ilmi.
+        </p>
+        <span class="inline-block px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">Pengajar Tahsin</span>
+      </div>
+
+      <!-- Ustadz Suyono Larno -->
+      <div data-pop-in style="--pop-in-delay: 120ms" class="bg-white rounded-3xl p-6 border border-slate-200 text-center shadow-sm hover:shadow-md transition-smooth">
+        <div class="w-24 h-24 rounded-full bg-amber-100 border-4 border-amber-50 mx-auto flex items-center justify-center text-amber-800 text-2xl font-bold mb-4">
+          SL
+        </div>
+        <h4 class="text-lg font-bold text-slate-900">Ustadz Suyono Larno</h4>
+        <p class="text-xs text-brand-700 font-semibold mb-3">Pemateri Kajian</p>
+        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+          Membimbing jamaah dalam kegiatan kajian dan pembelajaran Islam di Majelis Taklim Roudhotul Ilmi.
+        </p>
+        <span class="inline-block px-3 py-1 bg-slate-100 text-slate-600 rounded-full text-xs font-medium">Pemateri Kajian</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRUKTUR KEPENGURUSAN -->
+  <section class="py-16 bg-slate-100/70 border-t border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="text-brand-700 font-bold text-xs uppercase tracking-wider">Transparansi & Manajemen</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Susunan Pengurus Majelis</h2>
+        <p class="text-slate-600 text-sm mt-1">Dikelola secara amanah oleh pengurus dan setiap seksi.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="bg-white p-6 rounded-2xl border border-emerald-200 shadow-sm">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-extrabold">01</span>
+            <h3 class="text-sm font-bold text-emerald-800 uppercase tracking-wide">Ketua</h3>
+          </div>
+          <ol class="space-y-3">
+            <li class="flex items-start gap-3 text-sm font-semibold text-slate-900"><span class="text-xs text-emerald-700 font-bold">1.</span><span>Aditya Bayu Saputro, S.TP.</span></li>
+            <li class="flex items-start gap-3 text-sm font-semibold text-slate-900"><span class="text-xs text-emerald-700 font-bold">2.</span><span>Gandi Gunawan</span></li>
+          </ol>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-emerald-200 shadow-sm">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-extrabold">02</span>
+            <h3 class="text-sm font-bold text-emerald-800 uppercase tracking-wide">Sekretaris</h3>
+          </div>
+          <ol class="space-y-3">
+            <li class="flex items-start gap-3 text-sm font-semibold text-slate-900"><span class="text-xs text-emerald-700 font-bold">1.</span><span>Noviana Rohmatul Sholihah</span></li>
+            <li class="flex items-start gap-3 text-sm font-semibold text-slate-900"><span class="text-xs text-emerald-700 font-bold">2.</span><span>Marlia Nur Haliza</span></li>
+          </ol>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-emerald-200 shadow-sm">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-extrabold">03</span>
+            <h3 class="text-sm font-bold text-emerald-800 uppercase tracking-wide">Bendahara</h3>
+          </div>
+          <ol class="space-y-3">
+            <li class="flex items-start gap-3 text-sm font-semibold text-slate-900"><span class="text-xs text-emerald-700 font-bold">1.</span><span>Fakta Endah Sawitri</span></li>
+            <li class="flex items-start gap-3 text-sm font-semibold text-slate-900"><span class="text-xs text-emerald-700 font-bold">2.</span><span>Fitri</span></li>
+          </ol>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-amber-200 shadow-sm">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center font-extrabold">04</span>
+            <h3 class="text-sm font-bold text-amber-800 uppercase tracking-wide">Seksi Kerohanian</h3>
+          </div>
+          <ul class="space-y-3">
+            <li class="text-sm font-semibold text-slate-900">Khoirul</li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-amber-200 shadow-sm">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center font-extrabold">05</span>
+            <h3 class="text-sm font-bold text-amber-800 uppercase tracking-wide">Seksi Sosial</h3>
+          </div>
+          <ol class="space-y-3">
+            <li class="flex items-start gap-3 text-sm font-semibold text-slate-900"><span class="text-xs text-amber-700 font-bold">1.</span><span>Sari Khotimah</span></li>
+            <li class="flex items-start gap-3 text-sm font-semibold text-slate-900"><span class="text-xs text-amber-700 font-bold">2.</span><span>Iladinem</span></li>
+          </ol>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-amber-200 shadow-sm">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center font-extrabold">06</span>
+            <h3 class="text-sm font-bold text-amber-800 uppercase tracking-wide">Seksi Humas</h3>
+          </div>
+          <ol class="space-y-3">
+            <li class="flex items-start gap-3 text-sm font-semibold text-slate-900"><span class="text-xs text-amber-700 font-bold">1.</span><span>Dwi</span></li>
+            <li class="flex items-start gap-3 text-sm font-semibold text-slate-900"><span class="text-xs text-amber-700 font-bold">2.</span><span>Ayu</span></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEGALITAS MAJELIS -->
+  <section class="py-12 bg-white border-t border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-2xl border border-emerald-200 bg-emerald-50/70 p-6 sm:p-8">
+        <span class="text-brand-700 font-bold text-xs uppercase tracking-wider">Legalitas</span>
+        <h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 mt-1">Legalitas Majelis</h2>
+        <p class="text-sm text-slate-600 mt-3">
+          Berikut salinan Surat Keterangan Terdaftar (SKT) Majelis Taklim Roudhotul Ilmi untuk informasi publik:
+        </p>
+        <figure class="mt-6 max-w-md mx-auto">
+          <img
+            src="assets/images/legalitas-majelis.jpg"
+            alt="Salinan SKT Majelis Taklim Roudhotul Ilmi dengan watermark"
+            width="720"
+            height="997"
+            loading="lazy"
+            class="w-full h-auto rounded-xl border border-slate-200 shadow-sm"
+          >
+          <figcaption class="text-xs text-slate-500 text-center mt-2">
+            Salinan untuk informasi publik; gambar telah diberi watermark dan diperkecil.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-slate-400 text-sm pt-14 pb-8 mt-auto border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="assets/images/logo.png" alt="Logo Majelis Taklim Roudhotul Ilmi" class="w-10 h-10 rounded-full object-contain shrink-0">
+            <span class="text-lg font-bold text-white tracking-tight">ROUDHOTUL ILMI</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Majelis Taklim Roudhotul Ilmi berdedikasi menyebarkan dakwah Islam berlandaskan Al-Qur'an dan As-Sunnah.
+          </p>
+          <div class="text-xs text-emerald-400 font-medium">www.roudhotulilmi.id</div>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Navigasi Halaman</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-amber-300 transition-smooth">Beranda Utama</a></li>
+            <li><a href="profil.html" class="hover:text-amber-300 transition-smooth">Profil & Struktur Pengurus</a></li>
+            <li><a href="jadwal.html" class="hover:text-amber-300 transition-smooth">Jadwal Kajian Rutin & Akbar</a></li>
+            <li><a href="media.html" class="hover:text-amber-300 transition-smooth">Rekaman & Artikel Islami</a></li>
+            <li><a href="infaq.html" class="hover:text-amber-300 transition-smooth">Salurkan Infaq & Wakaf</a></li>
+            <li><a href="kontak.html" class="hover:text-amber-300 transition-smooth">Kontak & Lokasi Peta</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Sekretariat Majelis</h4>
+          <p class="text-xs text-slate-400 leading-relaxed mb-3">
+            Dawung, RT. 03/04, Karang, Slogohimo.
+          </p>
+          <div class="space-y-1.5 text-xs">
+            <p><strong class="text-slate-300">WhatsApp:</strong> +62 823-2605-3837</p>
+            <p><strong class="text-slate-300">Email:</strong> info@roudhotulilmi.id</p>
+            <p><strong class="text-slate-300">Jam Layanan:</strong> Setiap Hari (08.00 - 17.00 WIB)</p>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Direct Link Platform</h4>
+          <div class="flex flex-wrap gap-2">
+            <a href="https://www.tiktok.com/@mt.roudhotulilmi?_r=1&_t=ZS-9AlJOOYPCT6" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 hover:text-white text-xs transition-smooth">TikTok</a>
+            <a href="https://whatsapp.com/channel/0029VbDPC96InlqMAjaE9f1R" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-emerald-700 hover:text-white text-xs transition-smooth">WA Channel</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-800 pt-6 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p>&copy; 2026 Majelis Taklim Roudhotul Ilmi. Seluruh Hak Cipta Dilindungi.</p>
+        <p class="text-emerald-400">Menuntut Ilmu Menuju Ridho Ilahi</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

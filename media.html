@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media & Arsip Dakwah | Majelis Taklim Roudhotul Ilmi</title>
+  <meta name="description" content="Pusat media dan arsip digital Majelis Taklim Roudhotul Ilmi (www.roudhotulilmi.id) - Akses langsung ke Channel YouTube, TikTok, Instagram, dan WhatsApp Channel resmi kami.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdf4',
+              100: '#dcfce7',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b',
+            },
+            gold: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+
+  <!-- NAVIGATION BAR -->
+  <header class="sticky top-0 z-50 glass-nav border-b border-slate-200/80 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-3 group">
+          <img src="assets/images/logo.png" alt="Logo Majelis Taklim Roudhotul Ilmi" class="w-12 h-12 rounded-full object-contain shadow-md group-hover:scale-105 transition-smooth shrink-0">
+          <div>
+            <span class="text-xl font-bold tracking-tight text-brand-900 block leading-tight">ROUDHOTUL ILMI</span>
+            <span class="text-xs text-brand-600 font-medium tracking-wide">Majelis Taklim & Pusat Dakwah</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center gap-1 lg:gap-2">
+          <a href="index.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-800 hover:bg-slate-100 transition-smooth">Beranda</a>
+          <a href="profil.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-800 hover:bg-slate-100 transition-smooth">Profil</a>
+          <a href="jadwal.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-800 hover:bg-slate-100 transition-smooth">Jadwal Kajian</a>
+          <a href="media.html" class="px-3 py-2 rounded-lg text-sm font-semibold text-brand-800 bg-brand-50 border border-brand-200/60">Media & Arsip</a>
+          <a href="infaq.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-800 hover:bg-slate-100 transition-smooth">Infaq & Wakaf</a>
+          <a href="kontak.html" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-600 hover:text-brand-800 hover:bg-slate-100 transition-smooth">Kontak</a>
+        </nav>
+
+        <div class="hidden md:flex items-center gap-3">
+          <a href="infaq.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white text-sm font-semibold px-4 py-2.5 rounded-xl shadow-md transition-smooth">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>Infaq Online</span>
+          </a>
+        </div>
+
+        <button id="mobile-menu-toggle" aria-label="Buka Menu" class="md:hidden p-2 rounded-xl text-slate-600 hover:text-brand-800 hover:bg-slate-100">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-2 shadow-xl">
+      <a href="index.html" class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50">Beranda</a>
+      <a href="profil.html" class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50">Profil Majelis</a>
+      <a href="jadwal.html" class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50">Jadwal & Info Kajian</a>
+      <a href="media.html" class="block px-3 py-2.5 rounded-lg text-base font-semibold text-brand-800 bg-brand-50">Media & Dokumentasi Dakwah</a>
+      <a href="infaq.html" class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50">Infaq, Sedekah & Wakaf</a>
+      <a href="kontak.html" class="block px-3 py-2.5 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50">Kontak & Sekretariat</a>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="islamic-pattern text-white py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-block px-3 py-1 bg-emerald-800/80 rounded-full text-xs text-amber-300 font-semibold mb-3 border border-emerald-600/60">ARSIP & SALURAN RESMI</span>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-white">Media & Arsip Digital</h1>
+      <p class="text-emerald-100/90 text-sm sm:text-base max-w-2xl mx-auto mt-2">
+        Akses cuplikan nasehat singkat dan broadcast resmi kami melalui saluran media yang tersedia.
+      </p>
+    </div>
+  </section>
+
+  <!-- GALERI DOKUMENTASI -->
+  <section class="py-14 bg-white border-b border-slate-200/80">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-8">
+        <span class="text-brand-700 font-bold text-xs uppercase tracking-wider">Dokumentasi</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Galeri Kegiatan & Berbagi</h2>
+        <p class="text-slate-600 text-sm mt-2">Geser foto atau pilih titik untuk melihat dokumentasi lainnya.</p>
+      </div>
+
+      <div data-media-carousel class="media-carousel" aria-label="Galeri dokumentasi Majelis Taklim Roudhotul Ilmi">
+        <div class="media-carousel__viewport">
+          <div class="media-carousel__track">
+            <figure class="media-carousel__slide" aria-hidden="false">
+              <img src="assets/images/media-gallery/kegiatan-majelis.png" alt="Kegiatan Tarhib Ramadhan dan acara santunan anak yatim bersama para jamaah" fetchpriority="high">
+              <figcaption>Kegiatan Tarhib Ramadhan dan acara santunan anak yatim bersama para jamaah</figcaption>
+            </figure>
+            <figure class="media-carousel__slide" aria-hidden="true">
+              <img src="assets/images/media-gallery/berbagi-santunan.png" alt="Penyerahan santunan kepada warga" loading="lazy">
+              <figcaption>Berbagi santunan kepada warga</figcaption>
+            </figure>
+            <figure class="media-carousel__slide" aria-hidden="true">
+              <img src="assets/images/media-gallery/penyaluran-bantuan.png" alt="Penyaluran bantuan kepada warga" loading="lazy">
+              <figcaption>Penyaluran bantuan kepada warga</figcaption>
+            </figure>
+            <figure class="media-carousel__slide" aria-hidden="true">
+              <img src="assets/images/media-gallery/berbagi-bantuan.png" alt="Kegiatan berbagi bantuan untuk warga" loading="lazy">
+              <figcaption>Kegiatan berbagi bantuan untuk warga</figcaption>
+            </figure>
+          </div>
+          <button type="button" data-carousel-previous class="media-carousel__arrow media-carousel__arrow--previous" aria-label="Foto sebelumnya">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 18-6-6 6-6"/></svg>
+          </button>
+          <button type="button" data-carousel-next class="media-carousel__arrow media-carousel__arrow--next" aria-label="Foto berikutnya">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 18 6-6-6-6"/></svg>
+          </button>
+        </div>
+        <div class="media-carousel__controls">
+          <button type="button" data-carousel-dot="0" class="media-carousel__dot" aria-label="Tampilkan foto 1: Kegiatan majelis" aria-current="true"></button>
+          <button type="button" data-carousel-dot="1" class="media-carousel__dot" aria-label="Tampilkan foto 2: Berbagi santunan"></button>
+          <button type="button" data-carousel-dot="2" class="media-carousel__dot" aria-label="Tampilkan foto 3: Penyaluran bantuan"></button>
+          <button type="button" data-carousel-dot="3" class="media-carousel__dot" aria-label="Tampilkan foto 4: Berbagi bantuan"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLATFORM MEDIA HUB -->
+  <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <span class="text-brand-700 font-bold text-xs uppercase tracking-wider">Saluran Dakwah Resmi</span>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Pilih Platform Media & Arsip Kami</h2>
+      <p class="text-slate-600 text-sm mt-2">Ikuti saluran TikTok dan WhatsApp resmi Majelis Taklim Roudhotul Ilmi.</p>
+    </div>
+
+    <!-- PLATFORM GRID -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+
+      <!-- 2. TIKTOK -->
+      <!-- ========================================== -->
+      <!-- LINK RESMI TIKTOK: Ganti href di bawah ini -->
+      <!-- ========================================== -->
+      <div data-pop-in style="--pop-in-delay: 0ms" class="bg-white rounded-3xl border border-slate-200/90 p-7 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group">
+        <div>
+          <!-- Icon & Platform Header -->
+          <div class="flex items-center justify-between mb-6">
+            <div class="w-16 h-16 rounded-2xl bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-900 shadow-inner group-hover:scale-110 group-hover:bg-slate-900 group-hover:text-white transition-all duration-300">
+              <!-- Official TikTok SVG -->
+              <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+              </svg>
+            </div>
+            <span class="px-3 py-1 bg-slate-100 text-slate-800 font-bold text-xs rounded-full border border-slate-200">Short Video</span>
+          </div>
+
+          <h3 class="text-xl font-bold text-slate-900 group-hover:text-slate-900 transition-smooth">TikTok</h3>
+          <p class="text-xs font-semibold text-slate-400 mt-0.5">@mt.roudhotulilmi</p>
+
+          <p class="text-xs text-slate-600 mt-4 leading-relaxed">
+            Cuplikan video hikmah <strong>nasehat singkat 60 detik</strong>, potongan mutiara kajian, quotes tanya jawab fikih ringkas, dan konten edukasi islami bagi anak muda.
+          </p>
+
+          <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-slate-500 space-y-1">
+            <p>✓ Mutiara Nasehat Singkat & Padat</p>
+            <p>✓ Format Vertikal Ramah Smartphone</p>
+          </div>
+        </div>
+
+        <div class="mt-6 pt-2">
+          <!-- Ganti href dengan link resmi akun TikTok Anda -->
+          <a href="https://www.tiktok.com/@mt.roudhotulilmi?_r=1&_t=ZS-9AlJOOYPCT6" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-slate-900 hover:bg-black text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md shadow-slate-900/20 transition-smooth">
+            <span>Buka Akun TikTok</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- 4. WHATSAPP CHANNEL (SALURAN RESMI) -->
+      <!-- ================================================= -->
+      <!-- LINK RESMI WA CHANNEL: Ganti href di bawah ini -->
+      <!-- ================================================= -->
+      <div data-pop-in style="--pop-in-delay: 120ms" class="bg-white rounded-3xl border-2 border-emerald-500/80 p-7 shadow-md hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
+        <div class="absolute -right-8 -top-8 w-24 h-24 bg-emerald-500/10 rounded-full blur-xl pointer-events-none"></div>
+
+        <div>
+          <!-- Icon & Platform Header -->
+          <div class="flex items-center justify-between mb-6">
+            <div class="w-16 h-16 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600 shadow-inner group-hover:scale-110 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300">
+              <!-- Official WhatsApp SVG -->
+              <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+              </svg>
+            </div>
+            <span class="px-3 py-1 bg-emerald-100 text-brand-800 font-bold text-xs rounded-full border border-emerald-300">Broadcast Resmi</span>
+          </div>
+
+          <h3 class="text-xl font-bold text-slate-900 group-hover:text-emerald-700 transition-smooth">WhatsApp Channel</h3>
+          <p class="text-xs font-semibold text-emerald-700 mt-0.5">Saluran Resmi Roudhotul Ilmi</p>
+
+          <p class="text-xs text-slate-600 mt-4 leading-relaxed">
+            Saluran broadcast resmi di aplikasi WhatsApp Anda. <strong>Privasi 100% terjaga</strong> (nomor telepon tidak terlihat), langsung menerima info kajian dadakan & link live streaming.
+          </p>
+
+          <div class="mt-4 pt-3 border-t border-slate-100 text-[11px] text-slate-500 space-y-1">
+            <p>✓ Privasi Aman (Nomor HP Tersembunyi)</p>
+            <p>✓ Notifikasi Langsung di Tab Saluran WA</p>
+          </div>
+        </div>
+
+        <div class="mt-6 pt-2">
+          <!-- Ganti href dengan link resmi saluran WhatsApp Anda -->
+          <a href="https://whatsapp.com/channel/0029VbDPC96InlqMAjaE9f1R" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md shadow-emerald-600/20 transition-smooth">
+            <span>Ikuti Saluran WhatsApp</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PANDUAN MUDAH BAGI JAMAAH -->
+  <section class="py-12 bg-white border-y border-slate-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-r from-brand-900 to-emerald-950 rounded-3xl p-8 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="space-y-2 text-center md:text-left">
+          <span class="text-amber-300 font-bold text-xs uppercase tracking-wider">💡 Tips untuk Jamaah</span>
+          <h3 class="text-xl sm:text-2xl font-bold text-white">Jangan Lewatkan Siaran Ilmu & Jadwal Kajian</h3>
+          <p class="text-xs sm:text-sm text-emerald-100/90 max-w-xl">
+            Aktifkan tombol lonceng (notifikasi) di YouTube dan klik "Ikuti" di Saluran WhatsApp agar Anda selalu menerima kabar terbaru tanpa tertinggal.
+          </p>
+        </div>
+        <div class="shrink-0 flex flex-col sm:flex-row gap-3">
+          <a href="jadwal.html" class="px-5 py-3 rounded-xl bg-amber-500 hover:bg-amber-600 text-slate-900 font-bold text-xs text-center transition-smooth shadow-md">
+            Lihat Jadwal Terdekat
+          </a>
+          <a href="kontak.html" class="px-5 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs text-center border border-white/20 transition-smooth">
+            Bantuan Admin
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-slate-400 text-sm pt-14 pb-8 mt-auto border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+        <div class="space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="assets/images/logo.png" alt="Logo Majelis Taklim Roudhotul Ilmi" class="w-10 h-10 rounded-full object-contain shrink-0">
+            <span class="text-lg font-bold text-white tracking-tight">ROUDHOTUL ILMI</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Majelis Taklim Roudhotul Ilmi berdedikasi menyebarkan dakwah Islam berlandaskan Al-Qur'an dan As-Sunnah.
+          </p>
+          <div class="text-xs text-emerald-400 font-medium">www.roudhotulilmi.id</div>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Navigasi Halaman</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-amber-300 transition-smooth">Beranda Utama</a></li>
+            <li><a href="profil.html" class="hover:text-amber-300 transition-smooth">Profil & Struktur Pengurus</a></li>
+            <li><a href="jadwal.html" class="hover:text-amber-300 transition-smooth">Jadwal Kajian Rutin & Akbar</a></li>
+            <li><a href="media.html" class="hover:text-amber-300 transition-smooth">Media & Arsip Digital</a></li>
+            <li><a href="infaq.html" class="hover:text-amber-300 transition-smooth">Salurkan Infaq & Wakaf</a></li>
+            <li><a href="kontak.html" class="hover:text-amber-300 transition-smooth">Kontak & Lokasi Peta</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Sekretariat Majelis</h4>
+          <p class="text-xs text-slate-400 leading-relaxed mb-3">
+            Dawung, RT. 03/04, Karang, Slogohimo.
+          </p>
+          <div class="space-y-1.5 text-xs">
+            <p><strong class="text-slate-300">WhatsApp:</strong> +62 823-2605-3837</p>
+            <p><strong class="text-slate-300">Email:</strong> info@roudhotulilmi.id</p>
+            <p><strong class="text-slate-300">Jam Layanan:</strong> Setiap Hari (08.00 - 17.00 WIB)</p>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Direct Link Platform</h4>
+          <div class="flex flex-wrap gap-2">
+            <a href="https://www.tiktok.com/@mt.roudhotulilmi?_r=1&_t=ZS-9AlJOOYPCT6" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 hover:text-white text-xs transition-smooth">TikTok</a>
+            <a href="https://whatsapp.com/channel/0029VbDPC96InlqMAjaE9f1R" target="_blank" rel="noopener noreferrer" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-emerald-700 hover:text-white text-xs transition-smooth">WhatsApp Channel</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-800 pt-6 text-center text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p>&copy; 2026 Majelis Taklim Roudhotul Ilmi. Seluruh Hak Cipta Dilindungi.</p>
+        <p class="text-emerald-400">Menuntut Ilmu Menuju Ridho Ilahi</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
